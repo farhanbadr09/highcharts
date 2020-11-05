@@ -1339,13 +1339,17 @@ var vennSeries = {
                 stateOptions
             );
 
+        // Set opacity directly to the SVG element, not to pattern #14372.
+        if ((point.color as any).pattern && point.graphic) {
+            point.graphic.attr({ opacity: options.opacity });
+        }
+
         // Return resulting values for the attributes.
         return {
             'fill': color(options.color)
+                .setOpacity(options.opacity as any)
                 .brighten(options.brightness as any)
                 .get(),
-            // Set opacity directly to the SVG element, not to pattern #14372.
-            opacity: options.opacity,
             'stroke': options.borderColor,
             'stroke-width': options.borderWidth,
             'dashstyle': options.borderDashStyle

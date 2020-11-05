@@ -129,8 +129,8 @@ QUnit.test('The inactive state should be set to the patterns the same as for col
 
     assert.strictEqual(
         chart.series[0].points[2].graphic.opacity,
-        0.75,
-        'In normal state the pattern opacity should be equal to 0.75.'
+        1,
+        'In normal state the pattern opacity should be equal to 1 for '
     );
     chart.series[0].points[2].setState('inactive');
 
