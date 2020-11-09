@@ -1,5 +1,5 @@
 Chart types
-===========
+============
 
 Highcharts support a range of different chart types so data can be displayed in a meaningful way. Highcharts supports line, spline, area, areaspline, column, bar, pie, scatter, gauge, arearange, areasplinerange and columnrange chart types.
 
